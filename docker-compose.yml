@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  nginx:
+    build: ./
+    env_file:
+      - .env
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf.template:/etc/nginx/conf.d/default.conf.template
+      - ./localhost.crt:/etc/nginx/ssl/localhost.crt
+      - ./localhost.key:/etc/nginx/ssl/localhost.key
+    ports:
+      - 5005:443
+    depends_on:
+      - travel_note
+      - travel_note_admin
+
+  travel_note:
+    build: 
+      context: ./packages/travel_note
+      dockerfile: Dockerfile
+    ports:
+      - 4322:4322
+
+  travel_note_admin:
+    build: 
+      context: ./packages/travel_note_admin
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ./packages/travel_note_admin:/app
+      - /app/node_modules
+    ports:
+      - 5003:5003
+

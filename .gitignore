@@ -5,6 +5,10 @@ dist
 tmp
 /out-tsc
 
+# private
+localhost.crt
+localhost.key
+
 # dependencies
 node_modules
 
