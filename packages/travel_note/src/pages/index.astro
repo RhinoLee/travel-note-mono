@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import ExampleModal from '../components/ExampleModal.vue';
+import { ModalsContainer } from 'vue-final-modal'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -60,6 +62,9 @@ import Card from '../components/Card.astro';
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
+
+		<ExampleModal client:only title="modal confirm"></ExampleModal>
+		<ModalsContainer client:only />
 	</main>
 </Layout>
 
