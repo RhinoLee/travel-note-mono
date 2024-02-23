@@ -1,0 +1,24 @@
+{
+	"editor.formatOnSave": true, // 存檔時自動格式調整
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "always",
+		"source.sortImports": "always"
+	},
+	"editor.insertSpaces": false, // 以空白取代tab符號
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"files.associations": {
+		"style.css": "tailwindcss"
+	},
+	"prettier.configPath": ".prettierrc.json"
+}
