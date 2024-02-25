@@ -1,26 +1,27 @@
 /* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-	// root: true,
+	root: true,
 	extends: [
-		"plugin:vue/vue3-essential",
-		"eslint:recommended",
-		"@vue/eslint-config-prettier/skip-formatting",
-		"plugin:cypress/recommended",
-		"plugin:tailwindcss/recommended",
+		'plugin:vue/vue3-essential',
+		'eslint:recommended',
+		'@vue/eslint-config-prettier/skip-formatting',
+		'plugin:cypress/recommended',
+		'plugin:tailwindcss/recommended',
 	],
+	plugins: ["prettier", "vue"],
 	overrides: [
 		{
-			files: ["cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}", "cypress/support/**/*.{js,ts,jsx,tsx}"],
-			extends: ["plugin:cypress/recommended"],
+			files: ['cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}', 'cypress/support/**/*.{js,ts,jsx,tsx}'],
+			extends: ['plugin:cypress/recommended'],
 		},
 	],
 	parserOptions: {
-		ecmaVersion: "latest",
+		ecmaVersion: 'latest',
 	},
 	rules: {
-		"prettier/prettier": "error",
-		"require-await": "error",
+		'prettier/prettier': 'error',
+		'require-await': 'error',
 	},
 };
