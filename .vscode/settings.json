@@ -20,5 +20,6 @@
 	"files.associations": {
 		"style.css": "tailwindcss"
 	},
-	"prettier.configPath": ".prettierrc.json"
+	"prettier.configPath": "",
+	"prettier.resolveGlobalModules": false
 }
